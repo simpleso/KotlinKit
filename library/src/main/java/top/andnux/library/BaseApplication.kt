@@ -1,16 +1,13 @@
 package top.andnux.library
 
-import android.app.Application
 import android.content.Context
+import android.support.multidex.MultiDex
+import android.support.multidex.MultiDexApplication
 
-class BaseApplication : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-    }
+class BaseApplication : MultiDexApplication() {
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
+        MultiDex.install(this)
     }
-
 }

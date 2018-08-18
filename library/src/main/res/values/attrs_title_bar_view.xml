@@ -1,0 +1,39 @@
+<resources>
+    <declare-styleable name="TitleBarView">
+        <attr name="titleText" format="string" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleImage" format="reference" />
+        <attr name="titleModle" format="enum">
+            <enum name="text" value="0" />
+            <enum name="image" value="1" />
+            <enum name="imageText" value="2" />
+        </attr>
+
+        <attr name="leftText" format="string" />
+        <attr name="leftSize" format="dimension" />
+        <attr name="leftColor" format="color" />
+        <attr name="leftImage" format="reference" />
+        <attr name="leftMagin" format="dimension" />
+        <attr name="leftModle" format="enum">
+            <enum name="text" value="0" />
+            <enum name="image" value="1" />
+            <enum name="imageText" value="2" />
+        </attr>
+
+        <attr name="rightText" format="string" />
+        <attr name="rightSize" format="dimension" />
+        <attr name="rightColor" format="color" />
+        <attr name="rightImage" format="reference" />
+        <attr name="rightMagin" format="dimension" />
+        <attr name="rightModle" format="enum">
+            <enum name="text" value="0" />
+            <enum name="image" value="1" />
+            <enum name="imageText" value="2" />
+        </attr>
+
+        <attr name="lineHeight" format="dimension"/>
+        <attr name="lineColor" format="color"/>
+
+    </declare-styleable>
+</resources>

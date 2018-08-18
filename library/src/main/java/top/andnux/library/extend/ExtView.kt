@@ -1,6 +1,21 @@
 package top.andnux.library.extend
 
 import android.view.View
+import android.view.ViewGroup
+
+/**
+ * 得到父View
+ */
+fun <T : View> T?.parentView(): View {
+    return this?.parent as View
+}
+
+/**
+ * 得到父ViewGroup
+ */
+fun <T : View> T?.parentViewGroup(): ViewGroup {
+    return this?.parent as ViewGroup
+}
 
 /***
  * 设置延迟时间的View扩展
@@ -26,11 +41,11 @@ fun <T : View> T.click(block: (T) -> Unit) = setOnClickListener {
 
 /***
  * 带延迟过滤的点击事件View扩展
- * @param delay Long 延迟时间，默认600毫秒
+ * @param time Long 延迟时间，默认600毫秒
  * @param block: (T) -> Unit 函数
  * @return Unit
  */
-fun <T : View> T.clickWithTrigger(time: Long = 600, block: (T) -> Unit){
+fun <T : View> T.clickWithTrigger(time: Long = 600, block: (T) -> Unit) {
     triggerDelay = time
     setOnClickListener {
         if (clickEnable()) {
@@ -40,15 +55,13 @@ fun <T : View> T.clickWithTrigger(time: Long = 600, block: (T) -> Unit){
 }
 
 private var <T : View> T.triggerLastTime: Long
-    get() = if (getTag(1123460103) != null)
-        getTag(1123460103) as Long else 0
+    get() = if (getTag(1123460103) != null) getTag(1123460103) as Long else 0
     set(value) {
         setTag(1123460103, value)
     }
 
 private var <T : View> T.triggerDelay: Long
-    get() = if (getTag(1123461123) != null)
-        getTag(1123461123) as Long else -1
+    get() = if (getTag(1123461123) != null) getTag(1123461123) as Long else -1
     set(value) {
         setTag(1123461123, value)
     }

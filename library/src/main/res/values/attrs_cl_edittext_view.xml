@@ -1,0 +1,12 @@
+<resources>
+    <declare-styleable name="CLEditText">
+        <attr name="leftDrawable" format="reference" />
+        <attr name="leftWidth" format="dimension" />
+        <attr name="rightDrawable" format="reference" />
+        <attr name="rightWidth" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="hintText" format="string" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+</resources>
